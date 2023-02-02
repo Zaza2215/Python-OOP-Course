@@ -15,6 +15,22 @@ class User:
         print('str:', value)
 
 
+# Practice 12.1
+
+class P:
+    @singledispatch
+    def get_number(value):
+        pass
+
+    @get_number.register(int)
+    def _(value):
+        return 100
+
+    @get_number.register(str)
+    def _(value):
+        return '100'
+
+
 if __name__ == '__main__':
     User.get_value(12.0)
     User.get_value(12)
