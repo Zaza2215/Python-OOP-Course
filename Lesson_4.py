@@ -4,7 +4,7 @@ class User:
 
     @property
     def name(self):
-        # Printing below is done during initialization
+        # Printing below is done during initialization if code is imported to cmd
         print('Value was returned!')
         return self._name
 
