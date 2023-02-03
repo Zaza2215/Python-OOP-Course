@@ -8,7 +8,9 @@ class User:
 
     def __iter__(self, other=0):
         print('__iter__')
-        if not ('array' in self.__dict__.keys()) or not self.array:
+        # if not ('array' in self.__dict__.keys()) or not self.array:
+        # UPDATE
+        if not hasattr(self, 'array') or not self.array:
             self.array = [i for i in range(other, 0, -1)]
         return self
 
