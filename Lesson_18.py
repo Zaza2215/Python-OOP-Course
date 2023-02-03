@@ -31,6 +31,9 @@ class P:
     def __eq__(self, other):
         return self.value == other
 
+    def __mul__(self, other):
+        return self.value * other
+
     def __hash__(self):
         sh = hash(self)
         print('self.__hash__:', sh)
